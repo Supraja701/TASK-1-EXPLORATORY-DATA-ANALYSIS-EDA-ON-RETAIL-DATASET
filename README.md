@@ -33,7 +33,7 @@ df['age_group'] = pd.cut(df['age'], bins=range(10, 80, 10), labels=['10-19','20-
 sns.barplot(x='age_group', y='total_sale', data=df.groupby('age_group', as_index=False)['total_sale'].sum())
 plt.title('Total Sales by Age Group')
 plt.show()
-# 50-59 age group is most active in purchases.
+#### 50-59 age group is most active in purchases.
 
 # Total sale by category
 sns.barplot(x='category', y='total_sale', data=df.groupby('category', as_index=False)['total_sale'].sum().sort_values(by='total_sale', ascending=False))
